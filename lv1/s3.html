@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <link href="../disain/disain-v02.css" rel="stylesheet" type="text/css">
+    <style>
+        #a,#b,#c,#d{
+            cursor: pointer;
+            padding: 8px 0px;
+            border: 1px solid orange;
+        }
+        .pilihan{
+            padding: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background: orange;
+        }
+        #a:hover,#b:hover,#c:hover,#d:hover{box-shadow: 2px 2px 2px 1px #ccc;}
+        .mulai{}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            var a = document.getElementById('a');
+            var b = document.getElementById('b');
+            var c = document.getElementById('c');
+            var d = document.getElementById('d');
+            var benar = document.getElementById('benar');
+            var salah = document.getElementById('salah');
+            var wHabis = document.getElementById('wHabis');
+            var waktu = 20;
+            setInterval(function () {
+                    waktu--;
+                    if (waktu == 0) {
+                        wHabis.style.display='block';
+                        d.style.background='orange';
+                        tksjwblv1s.style.color="white"
+                        waktu="-"
+                    } else {
+                        document.getElementById("countdown").innerHTML = waktu;
+                    }
+            }, 1000);
+                     
+            $('#a').click(function(e){   
+                d.style.background='orange';
+                tksjwblv1s.style.color="white"
+                a.style.background='rgb(214, 214, 214)';
+                salah.style.display='block';
+                waktu = "-"; 
+            });
+            $('#b').click(function(e){   
+                b.style.background='rgb(214, 214, 214)';
+                tksjwblv1s.style.color="white"
+                d.style.background='orange';
+                salah.style.display='block';
+                waktu = "-";
+            });     
+            $('#c').click(function(e){   
+                c.style.background='rgb(214, 214, 214)';
+                tksjwblv1s.style.color="white"
+                d.style.background='orange';
+                salah.style.display='block';
+                waktu = "-";   
+            });
+            $('#d').click(function(e){   
+                d.style.background='orange';
+                tksjwblv1s.style.color="white"
+                benar.style.display='block';
+                waktu = "-";   
+            });
+       });
+    </script>
+</head>
+
+<body>
+    <div class="waktu">
+        Sisa waktu <span id="countdown">20</span>
+    </div>
+    <div class="u-soal-lv1">Soal 3</div>
+    <a href="../tahapan.html" class="menu-lv1">Menu</div>
+    <div id="benar">
+        <div class="bngks-be-sa">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-b">Jawaban benar</div>
+            <a href="s4.html" class="jwb"><img src="../gambar/lanjut.png"></a>
+        </div>
+    </div>
+    <div id="salah">
+        <div class="bngks-be-sa">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-s">Jawaban salah</div>
+            <a href="s1.html" class="jwb-u"><img src="../gambar/ulang.png"></a>
+        </div>
+    </div>
+    <div id="wHabis">
+        <div class="bngks-be-sa teks-s">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-s">Waktu habis</div>
+            <a href="s1.html" class="jwb-u"><img src="../gambar/ulang.png"></a>
+        </div>
+    </div>    
+    <!-- <div id="popup">
+        <div class="ket">Ketika permainan dimulai waktu akan berjalan selama 20 detik untuk batas menjawab soal."klik play untuk mendengankan solanya", apakah kamu siap<font color="orange" size="4"><b> ?</b></font> </div>
+        <div class="isi-popup">
+            <img class="karakter"src="../gambar/karakter.png" alt="">
+            <div class="tindakan">
+                <a class="tmbl-2" href="../tahapan.html">Kembali</a>
+                <a class="tmbl-2 mulai">Iya siap!</a>
+            </div>
+        </div>
+    </div> -->
+    <div class="soal">
+        <figure>
+            <img class="gmbr" src="../gambar/suara-3.png">
+            <p><audio class="suara-lv1" src="../suara/Al-Falaq/ayat4.m4a" controls></audio></p>
+            <figcaption class="tks-lv1">
+                Apakah nama surah dari potongan ayat tersebut ?
+            </figcaption>
+        </figure>
+    </div>
+    <table>
+        <form action="#">
+            <tbody>
+                <tr>
+                    <td>
+                        <span id="a">
+                            <span class="pilihan">A.</span>
+                            <span id="tksjwblv1">An-nas . . .</span>
+                        </span>
+                    </td>
+                    <td>
+                        <span id="c">
+                            <span class="pilihan">C.</span>
+                            <span id="tksjwblv1">Al-ikhlas</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+                        <span id="b">
+                            <span class="pilihan">B.</span>
+                            <span id="tksjwblv1">Al-fatihah</span>
+                        </span>
+                    </td>
+                    <td>
+                        <span id="d">
+                            <span class="pilihan">D.</span>
+                            <span id="tksjwblv1s">Al-falaq .</span>
+                        </span>
+                    </td>
+                </tr>
+        </form>
+
+        </tbody>
+    </table>
+</body>
+</html>

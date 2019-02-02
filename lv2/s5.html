@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <link href="../disain/disain-v02.css" rel="stylesheet" type="text/css">
+    <style>
+        #a,#b,#c,#d{
+            height: 200px;
+            cursor: pointer;
+            padding: 0px 0px;
+        }
+        .gmbr{
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px 3px #ccc; 
+            margin: 55px 0px 15px 0px;
+            width: 110px;
+            height: 110px;
+            }
+        .soal{
+            text-align: center;
+            height: 62%;
+            background-image: url('../gambar/bg.jpg');
+            }
+        table{
+            border-top: 1px solid blue;
+            margin: auto;
+            height: 38%;
+            width: 100%;
+            bottom: 0px;
+        }
+        .pilihan-lv2{
+            border-radius: 0px 20px 0px 20px;
+            background: green;
+            font-weight: bold;
+            padding: 5px 7px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            border-right: 1px solid blue ;
+        }
+        td{text-align: center;padding-left: 5px;}
+        #tksjwblv2a,#tksjwblv2b,#tksjwblv2c,#tksjwblv2d{
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid green;
+            padding: 5px 10px;
+            color: green;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .tks-color{color: white;display: none;}
+        .mulai{}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            var a = document.getElementById('a');
+            var b = document.getElementById('b');
+            var c = document.getElementById('c');
+            var d = document.getElementById('d');
+            var benar = document.getElementById('benar');
+            var salah = document.getElementById('salah');
+            var wHabis = document.getElementById('wHabis');
+            var waktu = 20;
+            // $('.mulai').click(function(e){
+            //     var tutup = document.getElementById('popup');
+            //     tutup.style.display = 'none';
+                
+                setInterval(function () {
+                    waktu--;
+                    if (waktu == 0) {
+                        wHabis.style.display='block';
+                        tksjwblv2.style.color ='white'; 
+                        waktu="-"
+                        a.style.background='blue';
+                    } else {
+                        document.getElementById("countdown").innerHTML = waktu;
+                    }
+                }, 1000);
+            // });
+                     
+            $('#a').click(function(e){
+                tksjwblv2a.style.background ='#ccc'; 
+                tksjwblv2d.style.color ='white'; 
+                tksjwblv2d.style.background='green';
+                salah.style.display='block';
+                waktu = "-"; 
+            });
+            $('#b').click(function(e){   
+                tksjwblv2b.style.background ='#ccc'; 
+                tksjwblv2d.style.color ='white'; 
+                tksjwblv2d.style.background='green';
+                salah.style.display='block';
+                waktu = "-";
+            });     
+            $('#c').click(function(e){     
+                tksjwblv2c.style.background ='#ccc'; 
+                tksjwblv2d.style.color ='white'; 
+                tksjwblv2d.style.background='green';
+                salah.style.display='block';
+                waktu = "-";   
+             });
+            $('#d').click(function(e){     
+                tksjwblv2d.style.background ='green'; 
+                tksjwblv2d.style.color ='white'; 
+                benar.style.display='block';
+                waktu = "-";   
+             });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="waktu">
+        Sisa waktu <span id="countdown">20</span>
+    </div>
+    <div class="u-soal-lv2">Soal 5</div>
+    <a href="../tahapan.html" class="menu-lv2">Menu</div>
+        <div id="benar">
+        <div class="bngks-be-sa">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-b">Jawaban benar</div>
+            <a href="../lv3/s1.html" class="jwb"><img src="../gambar/lanjut.png"></a>
+        </div>
+    </div>
+    <div id="salah">
+        <div class="bngks-be-sa">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-s">Jawaban salah</div>
+            <a href="s1.html" class="jwb-u"><img src="../gambar/ulang.png"></a>
+        </div>
+    </div>
+    <div id="wHabis">
+        <div class="bngks-be-sa teks-s">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-s">Waktu habis</div>
+            <a href="s1.html" class="jwb-u"><img src="../gambar/ulang.png"></a>
+        </div>
+    </div>    
+    <!-- <div id="popup">
+        <div class="ketlv3">Selamat kamu telah mencapai tahap 2, "tekan play untuk mendengar soalnya" waktu kami berikan selama 20 detik, apakah kamu siap <font color="green" size="4"><b> ?</b></font> </div>
+        <div class="isi-popup2">
+            <img class="karakter"src="../gambar/karakter.png" alt="">
+            <div class="tindakan2">  
+                <a class="tmbl-3" href="../tahapan.html">Kembali</a>
+                <a class="tmbl-3 mulai">Iya siap!</a>
+            </div>
+        </div>
+    </div> -->
+    <div class="soal">
+        <figure>
+            <img class="gmbr" src="../gambar/suara-3.png">
+            <p><audio class="suara-lv2" src="../suara/Sholat/Sholawat/NabiMuhammad.m4a" controls></audio></p>
+            <figcaption class="tks-lv2">
+                Suara pada bacaan tersebut adalah ?
+            </figcaption>
+        </figure>
+    </div>
+    <table>
+        <form action="#">
+            <tbody>
+                <tr>
+                    <td>
+                        <span id="a">
+                            <span class="pilihan-lv2">A</span>
+                            <span id="tksjwblv2a">Adzan</span>
+                        </span>
+                    </td>
+                    <td>
+                        <span id="b">
+                            <span class="pilihan-lv2">B</span>
+                            <span id="tksjwblv2b">Tilawatil Qur'an</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+                        <span id="c">
+                            <span class="pilihan-lv2">C</span>
+                            <span id="tksjwblv2c">Iqomah</span>
+                        </span>
+                    </td>
+                    <td>
+                        <span id="d">
+                            <span class="pilihan-lv2">D</span>
+                            <span id="tksjwblv2d">Sholawat</span>
+                        </span>
+                    </td>
+                </tr>
+        </form>
+
+        </tbody>
+    </table>
+</body>
+</html>

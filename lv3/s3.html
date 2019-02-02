@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <link href="../disain/disain-v02.css" rel="stylesheet" type="text/css">
+    <style>
+        #a,#b,#c,#d{
+            background: blue;
+            border: 1px solid blue;
+        }
+        #gmbrba,#gmbrsa,#gmbrbb,#gmbrsb,#gmbrbc,#gmbrsc,#gmbrbd,#gmbrsd{
+            margin-top:10px; 
+            display: none;
+            position:fixed;
+            padding: 5px;
+            border-radius: 20px;
+            margin-left: 3px;
+        }        td{padding: 5px;}
+        #gmbrba,#gmbrbb,#gmbrbc,#gmbrbd{background: blue;}
+        #gmbrsa,#gmbrsb,#gmbrsc,#gmbrsd{background: red;}
+        #a:hover,#b:hover,#c:hover,#d:hover{background: white;}
+        .mulai{}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            var a = document.getElementById('a');
+            var b = document.getElementById('b');
+            var c = document.getElementById('c');
+            var d = document.getElementById('d');
+            var benar = document.getElementById('benar');
+            var salah = document.getElementById('salah');
+            var wHabis = document.getElementById('wHabis');
+            var waktu = 30;
+            // $('.mulai').click(function(e){
+            //     var tutup = document.getElementById('popup');
+            //     tutup.style.display = 'none';
+                
+                setInterval(function () {
+                    waktu--;
+                    if (waktu == 0) {
+                        wHabis.style.display='block';
+                        a.style.background='blue';
+                        waktu="-"
+                    } else {
+                        document.getElementById("countdown").innerHTML = waktu;
+                    }
+                }, 1000);
+            // });
+                     
+            $('#a').click(function(e){   
+                gmbrsa.style.display='inline';
+                gmbrbd.style.display='inline';
+                salah.style.display='block';
+                waktu = "-"; 
+            });
+            $('#b').click(function(e){   
+                gmbrsb.style.display='inline';
+                gmbrbd.style.display='inline';
+                salah.style.display='block';
+                waktu = "-";
+             });     
+            $('#c').click(function(e){   
+                gmbrsc.style.display='inline';
+                gmbrbd.style.display='inline';
+                salah.style.display='block';
+                waktu = "-";   
+            });
+            $('#d').click(function(e){   
+                gmbrbd.style.display='inline';
+                benar.style.display='block';
+                waktu = "-";   
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="waktu">
+        Sisa waktu <span id="countdown">30</span>
+    </div>
+    <div class="u-soal-lv3">Soal 3</div>
+    <a href="../tahapan.html" class="menu-lv3">Menu</div>
+        <div id="benar">
+        <div class="bngks-be-sa">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-b">Jawaban benar</div>
+            <a href="s4.html" class="jwb"><img src="../gambar/lanjut.png"></a>
+        </div>
+    </div>
+    <div id="salah">
+        <div class="bngks-be-sa">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-s">Jawaban salah</div>
+            <a href="s1.html" class="jwb-u"><img src="../gambar/ulang.png"></a>
+        </div>
+    </div>
+    <div id="wHabis">
+        <div class="bngks-be-sa teks-s">
+            <a href="../tahapan.html" class="jwb"><img src="../gambar/menu.png"></a>
+            <div class="teks-s">Waktu habis</div>
+            <a href="s1.html" class="jwb-u"><img src="../gambar/ulang.png"></a>
+        </div>
+    </div>    
+    <!-- <div id="popup">
+        <div class="ketlv2">Pada tahap 3 dan so'al 1 ini, kami berikan waktu selama 30 detik.<br>"Jika salah menjawab, teruslah mengulang untuk mencapai kebenaran yang sempurna", apakah kamu siap<font color="blue" size="4"><b> ?</b></font> </div>
+        <div class="isi-popup3">
+            <img class="karakter"src="../gambar/karakter.png" alt="">
+            <div class="tindakan3">
+                <a class="tmbl-4" href="../tahapan.html">Kembali</a>
+                <a class="tmbl-4 mulai">Iya siap!</a>
+            </div>
+        </div>
+    </div> -->
+    <div class="soal">
+        <figure>
+            <img class="gmbr" src="../gambar/suara-3.png">
+            <p><audio id="suara" class="suara-lv3" src="../suara/An-nas/ayat6.m4a" controls></audio></p>
+            <figcaption class="tks-lv3">
+                Surah dan ayat berapakah suara ini ?
+            </figcaption>
+        </figure>
+    </div>
+    <table>
+        <form action="#">
+            <tbody>
+                <tr>
+                    <td><input class="tombol" id="a" type="submit" value="A. QS.114:3"><img id="gmbrba" src="../gambar/benar.png"><img id="gmbrsa" src="../gambar/salah.png"></td>
+                    <td><input class="tombol" id="c" type="submit" value="C. QS.113:1"><img id="gmbrbc" src="../gambar/benar.png"><img id="gmbrsc" src="../gambar/salah.png"></td>
+                </tr>
+                <tr>
+                    <td><input class="tombol" id="b" type="submit" value="B. QS.112:2"><img id="gmbrbb" src="../gambar/benar.png"><img id="gmbrsb" src="../gambar/salah.png"></td>
+                    <td><input class="tombol" id="d" type="submit" value="D. QS.114:6"><img id="gmbrbd" src="../gambar/benar.png"><img id="gmbrsd" src="../gambar/salah.png"></td>
+                </tr>
+        </form>
+
+        </tbody>
+    </table>
+</body>
+</html>
